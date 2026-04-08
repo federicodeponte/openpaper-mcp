@@ -1,0 +1,23 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiToken
+    properties:
+      apiToken:
+        type: string
+        description: "Your OpenPaper Bearer token. Get it from openpaper.dev: open DevTools → Network → any API request → Authorization header (part after 'Bearer ')"
+      apiUrl:
+        type: string
+        description: "OpenPaper API URL (default: https://api.openpaper.dev)"
+        default: "https://api.openpaper.dev"
+  commandFunction: |-
+    (config) => ({
+      command: "python",
+      args: ["server.py"],
+      env: {
+        OPENPAPER_API_TOKEN: config.apiToken,
+        OPENPAPER_API_URL: config.apiUrl || "https://api.openpaper.dev"
+      }
+    })
