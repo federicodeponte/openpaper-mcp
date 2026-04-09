@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.openpaper-dev/openpaper-mcp -->
 # OpenPaper MCP Server
 
 Generate fully-cited academic research papers from Claude Desktop or any MCP client.
