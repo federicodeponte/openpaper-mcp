@@ -14,9 +14,12 @@ dependencies = [
     "httpx>=0.27.0",
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
 [project.scripts]
 openpaper-mcp = "server:main"
 
 [project.urls]
 Homepage = "https://openpaper.dev"
-Repository = "https://github.com/openpaper-dev/openpaper-mcp"
+Repository = "https://github.com/federicodeponte/openpaper-mcp"
