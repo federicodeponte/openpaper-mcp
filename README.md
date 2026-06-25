@@ -14,15 +14,30 @@ OpenPaper uses 18 specialized AI agents to search 500M+ academic sources (OpenAl
 3. Click any request → find the `Authorization` header
 4. Copy the value after `Bearer ` — that's your token
 
-### 2. Install dependencies
+### 2. Configure Claude Desktop
+
+Add to your `claude_desktop_config.json` (no manual install needed — `uvx` fetches the published package on first run):
+
+```json
+{
+  "mcpServers": {
+    "openpaper": {
+      "command": "uvx",
+      "args": ["openpaper-mcp"],
+      "env": {
+        "OPENPAPER_API_TOKEN": "your-token-here"
+      }
+    }
+  }
+}
+```
+
+<details>
+<summary>Run from source instead</summary>
 
 ```bash
 pip install mcp httpx
 ```
-
-### 3. Configure Claude Desktop
-
-Add to your `claude_desktop_config.json`:
 
 ```json
 {
@@ -37,6 +52,8 @@ Add to your `claude_desktop_config.json`:
   }
 }
 ```
+
+</details>
 
 ## Tools
 
