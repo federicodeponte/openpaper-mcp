@@ -16,8 +16,12 @@ jobs:
 
       - name: Install mcp-publisher
         run: |
+          # v1.7.x mints the GitHub OIDC token with the audience the registry
+          # now requires (https://registry.modelcontextprotocol.io). v1.5.0
+          # used the old "mcp-registry" audience and fails login with a 401
+          # "invalid audience".
           curl -fsSL -o /tmp/mcp-publisher.tar.gz \
-            https://github.com/modelcontextprotocol/registry/releases/download/v1.5.0/mcp-publisher_linux_amd64.tar.gz
+            https://github.com/modelcontextprotocol/registry/releases/download/v1.7.9/mcp-publisher_linux_amd64.tar.gz
           tar -xzf /tmp/mcp-publisher.tar.gz -C /usr/local/bin mcp-publisher
           chmod +x /usr/local/bin/mcp-publisher
 
