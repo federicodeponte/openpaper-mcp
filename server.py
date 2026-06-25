@@ -255,5 +255,10 @@ def list_my_papers(limit: int = 10) -> dict:
     }
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Console-script entry point. Runs the MCP server over stdio."""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()

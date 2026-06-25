@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "openpaper-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for OpenPaper - generate academic papers with verified citations"
 readme = "README.md"
 license = "MIT"
@@ -21,5 +21,5 @@ packages = ["."]
 openpaper-mcp = "server:main"
 
 [project.urls]
-Homepage = "https://openpaper.dev"
+Homepage = "https://openpaper.dev?utm_source=mcp_registry&utm_medium=pypi"
 Repository = "https://github.com/federicodeponte/openpaper-mcp"
