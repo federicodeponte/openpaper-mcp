@@ -5,7 +5,7 @@
   "runtime": "python",
   "python_dependencies": [
     "httpx",
-    "mcp"
+    "mcp>=1.9.4,<2.0.0"
   ],
   "secrets_needed": [
     "OPENPAPER_API_TOKEN"
