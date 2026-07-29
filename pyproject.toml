@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "openpaper-mcp"
-version = "0.1.1"
-description = "MCP server for OpenPaper - generate academic papers with verified citations"
+version = "0.1.2"
+description = "Autonomous research MCP server: auto research from a prompt to a fully-cited academic paper with verified citations"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"

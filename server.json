@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.federicodeponte/openpaper-mcp",
-  "description": "Generate academic papers with AI agents and verified citations via OpenPaper.dev",
+  "description": "Autonomous research engine: auto research from a prompt to a fully-cited academic paper via MCP",
   "repository": {
     "url": "https://github.com/federicodeponte/openpaper-mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "openpaper-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },

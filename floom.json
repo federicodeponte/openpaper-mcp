@@ -1,6 +1,6 @@
 {
   "name": "OpenPaper",
-  "description": "Generate fully-cited academic research papers. 18 AI agents search 500M+ sources (OpenAlex, Crossref, Semantic Scholar) and write thesis-level papers with verified citations.",
+  "description": "Autonomous research engine: auto research from a prompt to a fully-cited academic paper. 18 AI agents search 500M+ sources (OpenAlex, Crossref, Semantic Scholar) and verify every citation.",
   "manifest_version": "2.0",
   "runtime": "python",
   "python_dependencies": [

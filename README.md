@@ -1,7 +1,7 @@
 <!-- mcp-name: io.github.federicodeponte/openpaper-mcp -->
 # OpenPaper MCP Server
 
-Generate fully-cited academic research papers from Claude Desktop or any MCP client.
+OpenPaper is an autonomous research engine for Claude Desktop and any MCP client. Auto research from a prompt to a fully-cited academic paper, exported as PDF, DOCX, or ZIP.
 
 OpenPaper uses 18 specialized AI agents to search 500M+ academic sources (OpenAlex, Crossref, Semantic Scholar) and write thesis-level papers with every citation linked to a real publication.
 
