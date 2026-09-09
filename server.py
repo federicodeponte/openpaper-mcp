@@ -4,7 +4,8 @@ OpenPaper MCP Server
 Exposes OpenPaper's academic paper generation API as MCP tools.
 Users need an OpenPaper account and their Bearer token.
 
-Get your token from openpaper.dev → Network tab → any API request → Authorization header.
+Get your token from openpaper.dev → DevTools (F12) → Application tab → Cookies →
+https://openpaper.dev → the `auth_token` cookie (a durable 30-day token).
 """
 
 import os
@@ -22,8 +23,9 @@ def _headers() -> dict:
     if not API_TOKEN:
         raise ValueError(
             "OPENPAPER_API_TOKEN not set. "
-            "Get your token from openpaper.dev → open DevTools → Network tab → "
-            "any API request → Authorization header (the part after 'Bearer ')."
+            "Get your token from openpaper.dev → open DevTools (F12) → Application tab → "
+            "Cookies → https://openpaper.dev → copy the `auth_token` cookie value "
+            "(a durable 30-day token; do not use the short-lived Authorization header)."
         )
     return {
         "Authorization": f"Bearer {API_TOKEN}",

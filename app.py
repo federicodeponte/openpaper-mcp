@@ -5,7 +5,8 @@ Exposes each MCP tool as a Floom action so the same server code can run both
 as an MCP stdio server (via server.py) and as a Floom marketplace app.
 
 Requires the OPENPAPER_API_TOKEN secret. Users get it from openpaper.dev:
-DevTools -> Network -> any request -> Authorization header (after 'Bearer ').
+DevTools (F12) -> Application -> Cookies -> https://openpaper.dev -> the
+`auth_token` cookie value (a durable 30-day token).
 """
 
 import os
@@ -22,8 +23,9 @@ def _ensure_token() -> None:
     if not token:
         raise ValueError(
             "OPENPAPER_API_TOKEN secret is not set. "
-            "Get your token from openpaper.dev -> DevTools -> Network -> "
-            "any request -> Authorization header (after 'Bearer ')."
+            "Get your token from openpaper.dev -> DevTools (F12) -> Application -> "
+            "Cookies -> https://openpaper.dev -> the `auth_token` cookie value "
+            "(a durable 30-day token; do not use the short-lived Authorization header)."
         )
     # server.py reads the token from the process env, so mirror it there.
     os.environ["OPENPAPER_API_TOKEN"] = token

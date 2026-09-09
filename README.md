@@ -10,9 +10,10 @@ OpenPaper uses 18 specialized AI agents to search 500M+ academic sources (OpenAl
 ### 1. Get your API token
 
 1. Go to [openpaper.dev](https://openpaper.dev) and sign in
-2. Open DevTools → Network tab
-3. Click any request → find the `Authorization` header
-4. Copy the value after `Bearer ` — that's your token
+2. Open DevTools (F12) → **Application** tab → **Storage → Cookies → `https://openpaper.dev`**
+3. Copy the value of the `auth_token` cookie — that's your token
+
+This `auth_token` is a durable 30-day token and works whether you signed in with Google or email. Do not copy the `Authorization` header from the Network tab: on most pages the browser sends no such header (the app forwards the cookie server-side), and where one does appear it is a short-lived session token that expires in about an hour, so the MCP server would stop working soon after. When the token expires, repeat these steps to get a fresh one.
 
 ### 2. Configure Claude Desktop
 
