@@ -3,6 +3,8 @@
 
 Use OpenPaper from Claude Desktop or another MCP client to start an academic paper, check its progress, and retrieve the finished files. OpenPaper is for researchers who want to generate a cited draft from a prompt. [Open OpenPaper](https://openpaper.dev/) or run `uvx openpaper-mcp` after setting `OPENPAPER_API_TOKEN`.
 
+Read the [agent-friendly project summary](llms.txt) or [MIT license](LICENSE).
+
 OpenPaper uses 18 specialized AI agents to search 500M+ academic sources (OpenAlex, Crossref, Semantic Scholar) and write thesis-level papers with every citation linked to a real publication.
 
 ## Generate an academic paper from an MCP client

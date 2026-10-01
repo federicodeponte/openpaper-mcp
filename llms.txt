@@ -1,0 +1,9 @@
+# OpenPaper MCP Server
+
+OpenPaper MCP lets Claude Desktop and other MCP clients start academic paper drafts, check progress, and retrieve download links through OpenPaper.
+
+- [README](https://github.com/federicodeponte/openpaper-mcp#readme): setup, MCP tool names, example workflow, and frequently asked questions.
+- [OpenPaper](https://openpaper.dev/): hosted research paper application and account setup.
+- [Source](https://github.com/federicodeponte/openpaper-mcp/blob/main/server.py): MCP server implementation.
+
+The MCP tools are `start_paper_generation`, `check_paper_status`, and `list_my_papers`. Users supply their own OpenPaper account token through `OPENPAPER_API_TOKEN`.
