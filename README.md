@@ -1,11 +1,15 @@
 <!-- mcp-name: io.github.federicodeponte/openpaper-mcp -->
 # OpenPaper MCP Server
 
-OpenPaper is an autonomous research engine for Claude Desktop and any MCP client. Auto research from a prompt to a fully-cited academic paper, exported as PDF, DOCX, or ZIP.
+Use OpenPaper from Claude Desktop or another MCP client to start an academic paper, check its progress, and retrieve the finished files. OpenPaper is for researchers who want to generate a cited draft from a prompt. [Open OpenPaper](https://openpaper.dev/) or run `uvx openpaper-mcp` after setting `OPENPAPER_API_TOKEN`.
 
 OpenPaper uses 18 specialized AI agents to search 500M+ academic sources (OpenAlex, Crossref, Semantic Scholar) and write thesis-level papers with every citation linked to a real publication.
 
-## Setup
+## Generate an academic paper from an MCP client
+
+Ask your connected client to generate a paper on a topic. The server starts the job, returns a generation ID, and lets you check the status and download links. See [MCP tools for paper generation and status](#mcp-tools-for-paper-generation-and-status) for the exact calls.
+
+## Connect OpenPaper to Claude Desktop
 
 ### 1. Get your API token
 
@@ -56,7 +60,7 @@ pip install mcp httpx
 
 </details>
 
-## Tools
+## MCP tools for paper generation and status
 
 ### `start_paper_generation`
 Start generating a paper. Returns a `generation_id` immediately.
@@ -96,6 +100,24 @@ Claude: [calls check_paper_status("abc123")]
 Claude: [calls check_paper_status("abc123")]
 → Status: completed! PDF: https://... DOCX: https://...
 ```
+
+## Frequently asked questions
+
+### Can I generate a research paper with Claude Desktop?
+
+Yes. Add this MCP server to Claude Desktop, then ask it to start a paper. The server returns a generation ID that you can use to check progress.
+
+### How do I check a paper or find a previous draft?
+
+Use `check_paper_status` with its generation ID, or `list_my_papers` to retrieve recent papers and their download links.
+
+### Which file formats can I download?
+
+The OpenPaper workflow returns PDF and DOCX links when those files are available. The product also supports ZIP export.
+
+### Do I need an OpenPaper account?
+
+Yes. Sign in at [openpaper.dev](https://openpaper.dev/) and provide your own token through `OPENPAPER_API_TOKEN`. Keep the token private.
 
 ## Credits
 
