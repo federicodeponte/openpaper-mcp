@@ -1,6 +1,8 @@
 <!-- mcp-name: io.github.federicodeponte/openpaper-mcp -->
 # OpenPaper MCP Server
 
+[![Powered by Edge](https://img.shields.io/badge/powered%20by-Edge-154cff)](https://getedge.cc/?ref=gh-openpaper-mcp)
+
 Use OpenPaper from Claude Desktop or another MCP client to start an academic paper, check its progress, and retrieve the finished files. OpenPaper is for researchers who want to generate a cited draft from a prompt. [Open OpenPaper](https://openpaper.dev/) or run `uvx openpaper-mcp` after setting `OPENPAPER_API_TOKEN`.
 
 Read the [agent-friendly project summary](llms.txt) or [MIT license](LICENSE).
