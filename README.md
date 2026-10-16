@@ -103,6 +103,16 @@ Claude: [calls check_paper_status("abc123")]
 → Status: completed! PDF: https://... DOCX: https://...
 ```
 
+## Use this with Edge
+
+Prefer to write the draft inside your coding agent, without an OpenPaper token? The OpenDraft research skill runs in Claude Code, Codex or Cursor and checks every printed DOI. With [Edge](https://getedge.cc/skills/autonomous-research/?ref=gh-openpaper-mcp), your agent loads it automatically when you ask for a paper. Paste this into your agent once:
+
+```text
+Set up Edge for me: fetch https://getedge.cc/SKILL.md?ref=gh-openpaper-mcp with curl, read it, and follow it
+```
+
+Then ask: `Write a paper on <topic>`.
+
 ## Frequently asked questions
 
 ### Can I generate a research paper with Claude Desktop?
